@@ -34,6 +34,10 @@ def contact():
 def all_blogs():
     return render_template("blogs.html", all_blog=blog_post)
 
+@app.route("/contact", methods=["POST"])
+def receive_data():
+    return "Form Successfully Submited!"
+
 
 if __name__ == '__main__':
     app.run(debug=True)
